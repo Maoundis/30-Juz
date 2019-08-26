@@ -1,4 +1,8 @@
 # coding:utf8
+"""
+untuk para kang recode mohong authornya di cantumkan
+Ya bukan di pelajari mlh di recode
+"""
 import time,os,sys,re,threading
 import subprocess as sp
 try:
