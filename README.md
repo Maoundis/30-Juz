@@ -1,3 +1,18 @@
+# pesan
+
+Buat para para kang recode
+
+Saya mohong untuk cantumkan authornya
+
+Kalau tidak dosa tanggn sendiri
+
+Bdw Lu kayak tai sekian 
+
+
+
+
+
+
 # cara install
 
 ```
