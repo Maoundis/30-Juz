@@ -46,16 +46,19 @@ def menu():
     if ijo=='1':main()
     elif ijo=='2':
 	n=raw_input(G+'   [?] '+P+'yakin(y/n): ')
-	if n in ['y','Y']:
+	if n.lower() == "y":
 	   print G+"   [*]"+P+" Tunggu sebentar jangan keluar nanti error."
     	   sp.call('cd ..;rm -rf 30-Juz',shell=True, stderr=sp.STDOUT)
 	   sp.call('git clone https://github.com/Maoundis/30-Juz',shell=True, stderr=sp.STDOUT)
 	   sp.call('cd 30-Juz',shell=True, stderr=sp.STDOUT)
 	   sp.call('python2 alquran.py',shell=True, stderr=sp.STDOUT)
 	else:menu()
-    elif ijo=='3':info()
-    elif ijo=='0':sys.exit()
-    else:banner()
+    elif ijo == '3':
+        info()
+    elif ijo == '0':
+        sys.exit()
+    else:
+        banner()
 
 def main():
   try:
@@ -63,8 +66,8 @@ def main():
     url="https://islamdownload.net/124129-download-murottal-mp3-abdurrahman-as-sudais.html"
     data=requests.get(url).text
     parser=bs(data,'html.parser')
-    et=parser.findAll('a')
-    ha=parser.findAll('div',{'align':'right'})
+    et=parser.find_all('a')
+    ha=parser.find_all('div', {'align':'right'})
     b=0
     ukur.append('hai')
     for ai in ha:
